@@ -1,4 +1,4 @@
-## Hello 😉, and welcome to my portfolio! Inside, you will find:
+## Hello 😉, and welcome to my [portfolio](https://ikpc.github.io/portfolio/)! Inside, you will find:
 <ol>
   <li><strong>Short Presentation</strong></li>
   <li><strong>About me and languages/technologies I use</strong></li>
