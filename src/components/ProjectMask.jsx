@@ -4,8 +4,8 @@ const ProjectMask = ({link, descLink, image, descImage, linkGit}) => {
     return(
         <div className="mask">
             <a href={link} alt={descLink}>
-                <img src={image} style={{width: '30vw', height: '30vh'}} alt={descImage}/>
-                <a href={linkGit} alt="Github repository">
+                <img src={image} style={{width: '30vw', height: '30vh'}} alt={descImage} title={descImage}/>
+                <a href={linkGit} alt="Github repository" title="Github repository">
                     <i class="fa-brands fa-github"></i>
                 </a>
             </a>

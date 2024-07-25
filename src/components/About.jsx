@@ -6,13 +6,13 @@ const About = () => {
     /*const isVisible = scrollEvent();*/
 
     return (
-        <div className="aboutcontainer">
+        <div id="about" className="aboutcontainer">
             <a href="#about"><i id="arrow" class="fa-solid fa-chevron-down"></i></a>
             {/*isVisible ? (*/
-            <div id="about" className="about">
+            <div className="about">
                 <h1>About Me</h1>
                 <h2>Hey there! I'm Pabllo Cristian, a passionate developer with a love for Front-end. Here's a little bit about me:</h2>
-                <p>I'm a 20-year-old web developer with around 2 year of experience. Recently graduated in Internet Systems, I'm currently pursuing a post-graduate course in FullStack Web Development while seeking opportunities to kickstart my career as a trainee.</p>
+                <p>I'm a 20-year-old web developer with around 2 years of experience. Recently graduated in Internet Systems, I'm currently pursuing a post-graduate course in FullStack Web Development while seeking opportunities to kickstart my career as a trainee.</p>
                 <div className="Languages">
                     <h3>Languages/Tecnologies:</h3><br />
                     

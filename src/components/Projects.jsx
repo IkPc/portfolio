@@ -9,8 +9,8 @@ const Projects = () => {
     const [slideIndex, setSlideIndex] = useState(0);
     const slidesRef = useRef(null);
     const totalSlides = 4; 
-    const visibleSlides = 2; 
-    const offset = 100 / visibleSlides; 
+    const visibleSlides = 3; 
+    const offset = 300 / visibleSlides; 
 
     const handleNextSlide = () => {
         setSlideIndex((prevIndex) => (prevIndex + 1) % totalSlides);
@@ -24,16 +24,18 @@ const Projects = () => {
         const slides = slidesRef.current.children;
         const newTransform = -slideIndex * offset;
         for (let i = 0; i < slides.length; i++) {
+            slides[i].style.transition = 'transform 0.5s ease-in-out';
             slides[i].style.transform = `translateX(${newTransform}%)`;
         }
-    }, [slideIndex]);
+    }, [offset, slideIndex]);
 
     return (
-        <div className="projectContainer">
+        <div id="projects" className="projectContainer">
             <a href="#projects"><i id="arrow" className="fa-solid fa-chevron-down"></i></a>
+            <h3>The projects I've done by myself:</h3>
             <div className="ProjectWrapper">
                 <button className="buttonLeft" onClick={handlePrevSlide}>❮</button>
-                <div id="projects" className="Projects" ref={slidesRef}>
+                <div className="Projects" ref={slidesRef}>
                     <ProjectMask
                         link="https://ikpc.github.io/Random-Quote-Machine/"
                         descLink="Random Quote Machine Website"

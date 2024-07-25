@@ -28,7 +28,6 @@
 i {
   overflow: hidden;
 }
-/* width */
 /*Header*/
 .header {
   display: flex;
@@ -88,7 +87,7 @@ i {
     background-size: cover;
     top: 0;
     padding-top: 4%;
-    height: 80vh;
+    height: 82vh;
     width: 100vw;
 }
 .right h1, .right h2 {
@@ -230,7 +229,7 @@ i {
           
         }
 
-        h3 {
+        .aboutcontainer h3 {
           font-size: 2.5rem;
           color: #4b0f6e;
         }
@@ -300,11 +299,21 @@ i {
   background-color: #4b0f6e;
   height: 90vh;
   width: 100%;
+  color: white;
 }
   .projectContainer #arrow {
     font-size: 5rem;
     color: white;
-    margin-bottom: 10%;
+    margin-bottom: 4%;
+    overflow: hidden;
+  }
+  .projectContainer #arrow:active {
+    color: rgb(230, 230, 230);
+  }
+
+  .projectContainer h3 {
+    font-size: 2rem;
+    margin-bottom: 2%;
   }
 
   .ProjectWrapper {
@@ -315,6 +324,9 @@ i {
     .ProjectWrapper .Projects {
       display: grid;
       grid-template: "a b c d";
+      background-color: black;
+      margin: 0 2%;
+      border-radius:  10px 30px 10px 30px;
     }
 
     .buttonLeft, .buttonRight {
@@ -322,19 +334,23 @@ i {
       position: absolute;
       vertical-align: middle;
       color: white;
-      top: 48%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      top: 46%;
+      padding: 1%;
       font-weight: bold;
       font-size: 2rem;
       transition: all 100ms ease-in-out;
       z-index: 3;
       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      cursor: pointer;
     }
     .buttonLeft:hover, .buttonRight:hover {
       transform: scale(1.1);
     }
 
     .buttonLeft {
-      left: 2%;
+      left: 3.5%;
     }
     .buttonRight {
       right: 2%;
@@ -342,12 +358,10 @@ i {
 
   .mask {
     position: relative;
-    flex: 0 0 calc(100% / 3);
-    box-sizing: border-box;
-    padding: 10px;
+    flex: calc(100% / 3);
+    margin: 2%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 20px 40px 20px 40px;
   }
    .mask i {
     bottom: 10%;
@@ -357,3 +371,58 @@ i {
     font-size: 2rem;
     text-align: right;
    }
+
+/*Contacts*/
+.ContactWrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  height: 90vh;
+  width: 100%;
+  color: #4b0f6e;
+}
+
+  .ContactWrapper i {
+    font-size: 5rem;
+  }
+
+  .ContactWrapper #arrow:active {
+    color: #340a4d;
+  }
+
+  .ContactWrapper h3 {
+    font-size: 2.5rem;
+  }
+
+  .ContactWrapper h4 {
+    font-size: 1.5rem;
+  }
+
+  .ContactWrapper .socials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 20%;
+  }
+    .socials .connect {
+      display: inline-block;
+    }
+        .connect i {
+          padding: 0.5%;
+          color: rgb(8, 128, 197);
+        }
+        .connect .fa-github {
+          color: black;
+        }
+
+    .socials .email {
+      display: inline-block;
+    }
+    .email i {
+      color: black;
+      padding: 1%;
+    }
+
+    #bottom {
+      text-align: center;
+      margin-top: 10%;
+    }
