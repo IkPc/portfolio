@@ -9,9 +9,11 @@ const Home = () => {
                     <img src={img} alt="character"/>
                 </div>
                 <div className="right">
-                    <h1 id="name">{"`"}Hey, I'm </h1><h1 id="nick">also known as {"${"}<i>IkPc</i>{"}`"}</h1>
-                        
-                    <h1 id="work">I'm a <i><u>Front-End Developer</u></i></h1>
+                    <h1 id="name"><span>Hey there!</span> I'm </h1><br/>
+                    <h1 id="work">I'm a <label>Front-End <span>Developer</span></label></h1>
+                </div>
+                <div id="button">
+                    <a tabindex="4" href="mailto:pabllo.dev@gmail.com?subject=Work%20Opportunity"><i class="fa-solid fa-envelope" style={{verticalAlign: 'middle'}}></i> CONTACT ME</a>
                 </div>
             </div>
         </div>

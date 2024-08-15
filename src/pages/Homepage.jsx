@@ -1,19 +1,27 @@
 import React from "react";
-import Header from '../components/Header';
-import Home from '../components/Home';
-import About from '../components/About';
+import Header from '../components/1. Header';
+import Home from '../components/2. Home';
+import About from '../components/3. About';
 import './Hpage.css';
-import Projects from "../components/Projects";
-import Contacts from "../components/Contacts";
+import Projects from "../components/4. Projects";
+import Footer from "../components/5. Footer";
+import 'animate.css';
 
 const Homepage = () => {
     return(
         <div>
-            <Header />
-            <Home />
-            <About />
-            <Projects />
-            <Contacts />
+            <header>
+                <Header />
+            </header>
+            <main>
+                <Home />
+                <About />
+                <Projects />
+            </main>
+            <footer>
+                <Footer />
+            </footer>
+            
         </div>
     )
 }
