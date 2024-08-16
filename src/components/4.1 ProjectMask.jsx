@@ -2,10 +2,14 @@ import React from "react";
 
 const ProjectMask = ({ link, descLink, image, descImage, linkGit }) => {
     const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+    const [isTablet, setIsTablet] = React.useState(window.innerWidth > 768 && window.innerWidth < 1000);
+    const [isDesktop, setIsDesktop] = React.useState(window.innerWidth >= 1000);
 
     React.useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
+            setIsTablet(window.innerWidth > 768 && window.innerWidth <= 1000);
+            setIsDesktop(window.innerWidth > 1000);
         };
 
         window.addEventListener('resize', handleResize);
@@ -15,8 +19,8 @@ const ProjectMask = ({ link, descLink, image, descImage, linkGit }) => {
     }, []);
 
     const imageStyle = {
-        width: isMobile ? '80vw' : '28vw',
-        height: isMobile ? '29vh' : '30vh',
+        width: isMobile ? '60vw' : isTablet ? '50vw' : '30vw',
+        height: isMobile ? '29vh' : isTablet ? '30vh' : '30vh',
     };
 
     return (

@@ -9,10 +9,14 @@ const Projects = () => {
     const [slideIndex, setSlideIndex] = useState(0);
     const slidesRef = useRef(null);
     const totalSlides = 4;
-    const visibleSlides = 3;
-    const offsetDesktop = 300 / visibleSlides;
-    const offsetMobile = 100;
+
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [isTablet, setIsTablet] = useState(window.innerWidth > 768 && window.innerWidth <= 1000);
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1000);
+    
+    const offsetMobile = 100;
+    const offsetTablet = 150;
+    const offsetDesktop = 300;
 
     const handleNextSlide = () => {
         setSlideIndex((prevIndex) => (prevIndex + 1) % totalSlides);
@@ -25,6 +29,8 @@ const Projects = () => {
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
+            setIsTablet(window.innerWidth > 768 && window.innerWidth <= 1000);
+            setIsDesktop(window.innerWidth > 1000);
         };
 
         window.addEventListener('resize', handleResize);
@@ -35,14 +41,14 @@ const Projects = () => {
 
     useEffect(() => {
         const slides = slidesRef.current.children;
-        const offset = isMobile ? offsetMobile : offsetDesktop;
+        const offset = isMobile ? offsetMobile : isTablet ? offsetTablet : offsetDesktop;
         const newTransform = -slideIndex * offset;
 
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.transition = 'transform 0.5s ease-in-out';
             slides[i].style.transform = `translateX(${newTransform}%)`;
         }
-    }, [slideIndex, isMobile]);
+    }, [slideIndex, isMobile, isTablet, isDesktop]);
 
     return (
         <div id="projects" className="projectContainer">

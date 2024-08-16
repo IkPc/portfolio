@@ -521,8 +521,8 @@ i {
 /*mobile for projects*/
 @media (max-width: 768px) {
   .mask {
-    width: 80vw;
-    height: 30vh;
+    width: 60vw;
+    height: 31vh;
   }
 }
 /*Contacts*/
@@ -586,7 +586,7 @@ i {
   .FooterWrapper .socials a {
       margin: 0 15px;
       color: #fff;
-      color: inherit; /* Ensure the icons match the text color */
+      color: inherit;
   }
   @media (max-width: 1000px) {
     
