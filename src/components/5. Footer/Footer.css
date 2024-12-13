@@ -1,0 +1,31 @@
+.FooterWrapper {
+    background: var(--background-header);
+    padding: 10px 50vw 10px 0;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+}
+
+.FooterWrapper h3 {
+    margin: 10px 0;
+}
+
+.FooterWrapper .socials {
+  display: inline-block;
+  margin: auto;
+}
+
+.FooterWrapper .socials a {
+    margin: 0 15px;
+    color: #fff;
+    transition: all 10s ease-in-out;
+    font-size: 2rem;
+    :hover {
+      font-size: 2.2rem;
+    }
+}
+@media (max-width: 1000px) {
+  
+}

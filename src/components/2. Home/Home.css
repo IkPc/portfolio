@@ -1,0 +1,186 @@
+#home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    position: relative;
+    align-items: center; 
+    justify-items: normal;
+    background-color: #4b0f6e;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+  }
+  
+  .left img {
+    margin: 10vh 0 0 15vw;
+    align-items: center;
+  }
+  
+  .right {
+    align-items: center;
+    overflow: hidden;
+    width: 50vw;
+    height: 30vh;
+    margin: 20% 5vw 0 0;
+  }
+  
+  .right h1 {
+    text-align: left;
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 50px;
+    margin: 0 0 0 3vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .right #name {
+    font-family: 'Raleway';
+  }
+  .right #work {
+    margin-bottom: 20%;
+  }
+  .right label {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  #button {
+    position: relative; 
+    overflow: hidden;
+    width: 20vw;
+    height: 3vh;
+    align-content: center;
+    left: 60vw; 
+    padding: 1%;
+    margin: 0 0 5% 0;
+}
+  
+  #button a {
+    color: #4b0f6e;
+    box-shadow: 3px -3px 1px gray;
+    background-color: white;
+    text-decoration: none;
+    padding: 0.3rem 6rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  /*Home mobile*/
+  @media (max-width: 1800px) {
+    #button a {
+        padding: 0.3rem 3rem;
+    }
+  }
+  @media (max-width: 1350px) {
+    #button a {
+        padding: 0.3rem 1.5rem;
+    }
+  }
+  @media (max-width: 1250px) {
+    .left img {
+      margin: 10vh 0 0 1vw;
+    }
+    .right {
+      margin-right: 1vw;
+    }
+  }
+  @media (max-width: 1080px) {
+    .left img {
+      margin-left: 10%;
+      width: 50vw;
+      place-items: center;
+    }
+    .right {
+      align-items: center;
+      vertical-align: middle;
+      margin: 35vh 0 auto -10%;
+    }
+    .right h1 {
+      font-size: 1.6rem;
+    }
+    #home span {
+        display: block;
+    }
+    #work {
+      display: block;
+      left: 15%;
+    }
+    #button {
+        width: 35vw;
+    }
+  }
+  @media (max-width: 550px) {
+    .left img {
+      margin-left: -15%;
+      width: 70vw;
+      place-items: center;
+    }
+    .right {
+      width: auto;
+      margin: 15vh 0 0 -10%;
+    }
+    .right h1 {
+      font-size: 1.2rem;
+      z-index: 10;
+    }
+    #home span {
+        display: block;
+    }
+    #work {
+      display: block;
+      left: 15%;
+    }
+    #button {
+        height: 4.3vh;
+        bottom: 5vh;
+        left: 45vw;
+        width: 50vw;
+    }
+  }
+  @media (max-width: 400px) {
+    .right {
+        width: auto;
+        margin: 15vh 0 0 -12vw;
+      }
+    #button {
+        height: 4.5vh;
+        left: 35vw;
+        width: 55vw;
+    }
+  }
+  
+  /*name effect*/
+  #name {
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap; 
+    font-weight: normal;
+    right: 1%;
+  }
+  
+  #name::after {
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    animation: typing 4s steps(15) forwards, blink 0.5s infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 15ch;
+    }
+  }
+  
+  @keyframes blink {
+    from, to {
+      border-right: 1px solid white;
+    }
+    50% {
+      border-right: transparent;
+    }
+  }

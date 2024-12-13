@@ -1,0 +1,168 @@
+.aboutcontainer {
+    overflow: hidden;
+    height: 90vh;
+    align-items: center;
+  }
+  
+    .aboutcontainer i {
+      font-size: 5rem;
+    }
+      .aboutcontainer #arrow {
+        color: #4b0f6e;
+      }
+
+      .aboutcontainer #arrow:active {
+        color: #340a4d;
+      }
+      .aboutcontainer hr {
+        width: 30%;
+      }
+  
+      .aboutcontainer h1{
+        padding: 3vh 0 3vh;
+      }
+        .aboutcontainer h2 {
+          font-size: 1.5rem;
+        }
+          .aboutcontainer h1, .aboutcontainer h2 {
+            color: #4b0f6e;
+          }
+  
+          .aboutcontainer p {
+            position: relative;
+            justify-self: center;
+            color: #4b0f6e;
+            font-size: large;
+            font-weight: bold;
+            margin: 0 30%;
+          }
+  
+          .aboutcontainer h3 {
+            font-size: 2.5rem;
+            color: #4b0f6e;
+          }
+  
+    .aboutcontainer .about .Languages {
+      margin: 0 auto;
+      width: 100vw;
+    }
+  
+      .Languages .langs, #tailwindWrapper {
+        display: inline-block;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        padding: 5rem 7%;
+      }
+  
+      #htmlWrapper {
+        background: linear-gradient(45deg, #C04848 30%, #480048);
+        z-index: 1;
+        border-radius: 20px 0 0 20px;
+      }
+        .Languages #html {
+          color: orangered;
+        }
+  
+      #cssWrapper {
+        background: linear-gradient(130deg, #5f2c82 30%, #49a09d);
+        z-index: 1;
+      }
+        .Languages #css {
+          color: rgb(0, 132, 255);
+        }
+      #jsWrapper {
+        background: linear-gradient(45deg, #e65c00 30%, #F9D423);
+        z-index: 1;
+      }
+        .Languages #js {
+          color: yellow;
+        }
+      #reactWrapper {
+        background: linear-gradient(-45deg, #24C6DC 10%, #514A9D 60%);
+        z-index: 1;
+      }
+        .Languages #react {
+          color: rgb(38, 218, 224);
+        }
+      #tailwindWrapper {
+        background: linear-gradient(130deg, #134E5E 30%, #71B280);
+        z-index: 1;
+        border-radius: 0 20px 20px 0;
+      }
+        .Languages .tw {
+            height: 30px;
+            width: 50px;
+            padding: 25px 15px;
+        }
+  /*mobile about me*/
+  @media (max-width: 1650px) {
+    .aboutcontainer span {
+      display: none;
+    }
+      .aboutcontainer h1 {
+        font-size: 2rem;
+        margin-bottom: 1vh;
+      }
+      .aboutcontainer h2 {
+        font-size: 1.4rem;
+      }
+      .aboutcontainer p {
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0 15%;
+      }
+      .aboutcontainer h3 {
+        font-size: 2rem;
+      }
+    .Languages .langs, #tailwindWrapper {
+      font-size: 2rem;
+      padding: 4rem 5%;
+    }
+  }
+  @media (max-width: 1150px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+    .Languages .langs, #tailwindWrapper {
+        padding: 3rem 4%;
+    }
+  }
+  @media (max-width: 650px) {
+    .aboutcontainer i {
+        font-size: 3rem;
+    }
+    .aboutcontainer .about .Languages {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+      }
+    .Languages .langs, #tailwindWrapper {
+        padding: 1.5rem 2%;
+    }
+    .Languages .tw {
+        height: 30px;
+        width: 46px;
+        padding: 9px 0px;
+    }
+    @media (max-height: 950px) {
+        .Languages .langs, #tailwindWrapper {
+            margin-top: 5vh;
+            padding: 2rem 4%;
+        }
+    }
+  }
+@media (max-width: 400px) {
+    @media (max-height: 850px) {
+        .aboutcontainer h3 {
+            margin: 2vh 0;
+            font-size: 1.2rem;
+        }
+    }
+    .aboutcontainer h3{
+        margin: 2vh 0;
+    }
+    .Languages .langs, #tailwindWrapper {
+        margin-top: 0;
+        padding: 2rem 3.6%;
+    }    
+}
