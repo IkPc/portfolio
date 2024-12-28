@@ -4,6 +4,7 @@ import RQM from '../../assets/projectsImages/Random Quote Machine.png';
 import MP from '../../assets/projectsImages/Markdown Previewer.png';
 import DM from '../../assets/projectsImages/Drum Machine.png';
 import JC from '../../assets/projectsImages/JavaScript Calculator.png';
+import T from '../../assets/projectsImages/Timer.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Projects.css';
@@ -44,6 +45,13 @@ const Projects = () => {
             descImage: "Javascript Calculator",
             linkGit: "https://github.com/IkPc/javascript-calculator",
         },
+        {
+            link: "https://ikpc.github.io/Timer/",
+            descLink: "Timer Website",
+            image: T, 
+            descImage: "Timer",
+            linkGit: "https://github.com/IkPc/Timer",
+        }
     ];
 
     return (

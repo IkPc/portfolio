@@ -56,7 +56,7 @@
   
   #button a {
     color: #4b0f6e;
-    box-shadow: 3px -3px 1px gray;
+    box-shadow: -3px 3px 1px gray;
     background-color: white;
     text-decoration: none;
     padding: 0.3rem 6rem;
@@ -64,6 +64,17 @@
     font-size: 1rem;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s ease-in-out;
+  }
+  #button a:hover {
+    background-color: rgb(209, 209, 209); 
+    color: black; 
+    box-shadow: -3px 3px 1px rgb(153, 153, 153); 
+  }
+  #button a:active {
+    background-color: #2f0a44;
+    color: white; 
+    box-shadow: 3px -3px 1px black;
   }
   /*Home mobile*/
   @media (max-width: 1800px) {
